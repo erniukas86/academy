@@ -6,8 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import Paper from '@mui/material/Paper';
 import Head from './Head';
 import Row from './Row';
+import withLoading from '../../HOCs/withLoading';
 
-export default function BasicTable({data}) {
+function BasicTable({data}) {
     console.log('RENDER: BasicTable');
   return (
     <TableContainer component={Paper}>
@@ -20,3 +21,5 @@ export default function BasicTable({data}) {
     </TableContainer>
   );
 }
+
+export default withLoading(BasicTable);
